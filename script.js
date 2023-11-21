@@ -11,8 +11,25 @@ for (let i = 1; i < 101; i++) {
     const square = 
     `<div class="square">
         ${i}
-    </div>`
+    </div>`;
 
     // Fase 2 - output in pagina
     container.innerHTML += square;
+
+
+    // Fase 3 - aggiungere "fizz", "buzz" o "fizzbuz" a seconda del valore di "i"
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("fizzbuzz");
+    } else if (i % 5 === 0) {
+        console.log("buzz");
+    } else if (i % 3 === 0) {
+        console.log("fizz");
+    } else {
+        console.log(i);
+    }
+
+
 }
+
+// STEP 3: MODIFICA DEL TESTO NEGLI SQUARE - aggiungere "fizz", "buzz" o "fizzbuz" a seconda del valore di "i"
+
