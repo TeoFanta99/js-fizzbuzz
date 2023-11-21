@@ -13,8 +13,6 @@ h1 {
     flex-wrap: wrap;
     width: 80%;
     margin: 20px auto;
-    /* debug */
-    background-color: greenyellow;
     }
 
 .square {
@@ -28,3 +26,14 @@ h1 {
     line-height: 100px;
 }
 
+.fizzbuzz {
+    background-color: #F0466F;
+}
+
+.fizz {
+    background-color: #0CD6A1;
+}
+
+.buzz {
+    background-color: #FACE64;
+}

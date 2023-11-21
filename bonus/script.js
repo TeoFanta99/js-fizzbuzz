@@ -2,34 +2,55 @@
 const container = document.querySelector(".container");
 
 
-// STEP 2: CICLO FOR - aggiungiamo la possibilità di moltiplicare gli "square"
+// STEP 2: CICLO FOR - utilizzo metodo "append"
 for (let i = 1; i < 101; i++) {
 
-    // STEP 2.1: VERSIONE INNERHTML - aggiungiamo le istruzioni al nostro ciclo seguendo un approccio InnerHTML
+    // Step 2.1: creo DIV per lo square
+    const square = document.createElement("div");
 
-    // Fase 1 - creazione del div
-    const square = 
-    `<div class="square">
-        ${i}
-    </div>`;
+    // Step 2.2: aggiungo la classe "square"
+    square.classList.add("square");
 
-    // Fase 2 - output in pagina
-    container.innerHTML += square;
+    // Step 2.3: aggiungo il div al container
+    container.append(square);
 
 
-    // Fase 3 - aggiungere "fizz", "buzz" o "fizzbuz" a seconda del valore di "i"
+    // Step 2.4: aggiungo le possibili divisioni
     if (i % 3 === 0 && i % 5 === 0) {
-        console.log("fizzbuzz");
-    } else if (i % 5 === 0) {
-        console.log("buzz");
-    } else if (i % 3 === 0) {
-        console.log("fizz");
-    } else {
-        console.log(i);
+        let fizzbuzz = "fizzbuzz";
+        console.log(fizzbuzz);
+
+        // aggiungo la classe a "fizzbuzz" a square
+        square.classList.add("fizzbuzz")
+
+        // aggiungo l'elemento allo square
+        square.append(fizzbuzz);
     }
 
+    else if (i % 5 === 0) {
+        let buzz = "buzz";
+        console.log(buzz);
 
+        // aggiugno la classe "buzz" a square
+        square.classList.add("buzz");
+
+        // aggiungo l'elemento a square
+        square.append(buzz);
+    }
+
+    else if (i % 3 === 0) {
+        let fizz = "fizz";
+        console.log(fizz);
+
+        // aggiungiamo la classe "fizz" a square
+        square.classList.add("fizz");
+
+        // aggiungiamo l'elemento a square
+        square.append(fizz);
+    }
+
+    else {
+        // semplicemente aggiungiamo "i" allo square
+        square.append(i)
+    }
 }
-
-// STEP 3: MODIFICA DEL TESTO NEGLI SQUARE - aggiungere "fizz", "buzz" o "fizzbuz" a seconda del valore di "i"
-
